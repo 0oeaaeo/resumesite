@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Dennis | Senior Technologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              void: '#000000', // Pure Black
+              surface: '#09090b', // Zinc 950
+              'retro-amber': '#fbbf24', // Amber-400
+              'retro-amber-dim': '#b45309', // Amber-700
+              'ai-cyan': '#22d3ee', // Cyan-400
+              'ai-cyan-dim': '#0891b2', // Cyan-600
+              'ai-violet': '#a78bfa', // Violet-400
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px)", // Zinc-800 lines
+              'radial-fade': "radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
+            },
+            backgroundSize: {
+              'grid-40': '40px 40px',
+            },
+            animation: {
+              'cursor-blink': 'blink 1s step-end infinite',
+              'scanline': 'scanline 8s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow-pulse': 'glow 3s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
+              glow: {
+                '0%': { boxShadow: '0 0 10px rgba(34, 211, 238, 0.2)' },
+                '100%': { boxShadow: '0 0 20px rgba(34, 211, 238, 0.6), 0 0 10px rgba(167, 139, 250, 0.4)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<style>
+  /* Custom Scrollbar for that terminal feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a; /* Zinc-800 */
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46; /* Zinc-700 */
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-void text-zinc-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
